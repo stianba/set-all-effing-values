@@ -1,0 +1,30 @@
+{
+  "name": "set-all-effing-values",
+  "version": "1.0.0",
+  "description": "Set all values in an object to whatever.",
+  "main": "dist/setAllEffingValues.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "npm run build",
+    "build": "npm test && npm run build:clean && npm run build:dist && npm run build:flow",
+    "build:clean": "rimraf dist",
+    "build:dist": "babel -d dist src --ignore '**/__tests__/**'",
+    "build:flow": "flow-copy-source -v -i '**/__tests__/**' src dist"
+  },
+  "repository": "git@github.com:stianba/set-all-effing-values.git",
+  "author": "Stian Bakkane <stianba@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "flow-copy-source": "^1.2.1",
+    "jest": "^22.1.4",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6"
+  }
+}
