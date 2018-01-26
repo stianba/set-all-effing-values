@@ -1,6 +1,6 @@
 # set-all-effing-values
 
-Sett all effing values of a plain object to whatever (no recursion). Why? Because, why the eff not.
+Set all effing values of a plain object to whatever (no recursion). Why? Because, why the eff not.
 
 ```
 yarn add set-all-effing-values
